@@ -57,7 +57,9 @@ Este projeto automatiza a **coleta de dados de backup do Veeam** utilizando **AP
 ```
 
 ---
+⚠️ Atenção: Todas as credenciais e endpoints sensíveis foram substituídos por valores fictícios neste repositório. 
 
 ## 📄 Licença
+ 
+Este projeto é apenas para fins educacionais e demonstração de boas práticas em automação e integração.
 
-Projeto interno em uso prático. Uso educacional e técnico autorizado sob permissão.
