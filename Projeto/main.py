@@ -11,17 +11,17 @@ import sys
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 pg_conn = {
-    'dbname': 'veeam_db',
-    'user': 'Seu_usuario_DB',
-    'password': 'Seu_senha_DB',
-    'host': 'localhost',
-    'port': 5432
+    'dbname': 'Seu_db',       # Substitua pela sua chave real
+    'user': 'Seu_usuario_DB',   # Substitua pela sua chave real
+    'password': 'Seu_senha_DB', # Substitua pela sua chave real
+    'host': 'localhost',        # Substitua pela sua chave real
+    'port': 00000               # Substitua pela sua chave real
 }
 
-veeam_url_api = 'URL_seu_Veeam/api/v1/'
-veeam_url_token = 'URL_seu_Veeam/api/oauth2/token'
-username = 'Seu_Usuario'
-password = 'sua_senha'
+veeam_url_api = 'URL_seu_Veeam/api/v1/'             # Substitua pela sua chave real
+veeam_url_token = 'URL_seu_Veeam/api/oauth2/token'  # Substitua pela sua chave real
+username = 'Seu_Usuario'                            # Substitua pela sua chave real
+password = 'sua_senha'                              # Substitua pela sua chave real
 
 def get_sessions(token):
     headers = {'Authorization': f'Bearer {token}', 'x-api-version': '1.2-rev0'}
@@ -72,11 +72,11 @@ def main():
     backups = list_backups(token)
 
     jobs = [
-        "JOB_1",
-        "JOB_2",
-        "JOB_3",
-        "JOB_4",
-        "JOB_5"
+        "JOB_1", # Substitua pela sua chave real
+        "JOB_2", # Substitua pela sua chave real
+        "JOB_3", # Substitua pela sua chave real
+        "JOB_4", # Substitua pela sua chave real
+        "JOB_5" # Substitua pela sua chave real
     ]
 
     conn = psycopg2.connect(**pg_conn)
@@ -115,7 +115,7 @@ def main():
 
     if todos_com_sucesso:
         abrir_chamado(
-            project_id="Seu-Projeto-no-redmine",
+            project_id="Seu-Projeto-no-redmine",        # Substitua pela sua chave real
             subject="[Veeam] Todos os backups foram concluídos com sucesso - [Teste de Abertura Automatizada Neto]",
             description="Lista de Jobs:\n\n" + "\n".join(descricao),
             priority_id=1
